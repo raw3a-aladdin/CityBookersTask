@@ -1,0 +1,27 @@
+<div class="onepsngr col-12">
+
+  <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <label for="exampleInputEmail1">First Name</label>
+    <small *ngIf="!nameValid(fn) " class="form-text pull-right">*Please enter valid name</small>
+
+    <input type="text" class="form-control" placeholder="Enter first name" name="fname" [(ngModel)]="fname" required
+      #fn (input)="onChange(fn,ln,pn)">
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <label for="exampleInputPassword1">Last Name</label>
+    <small *ngIf="!nameValid(ln)" class="form-text pull-right">*Please enter valid name</small>
+    <input type="text" class="form-control" placeholder="Enter Last Name" name="lname" [(ngModel)]="lname" required #ln
+      (input)="onChange(fn,ln,pn)">
+  </div>
+
+  <app-datepicker-popup (childEvent)="date=$event"></app-datepicker-popup>
+
+  <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <label for="exampleInputPassword1">Phone No</label>
+    <small *ngIf="!nameValid(pn)" class="form-text pull-right">*Please enter valid name</small>
+    <input type="text" class="form-control" placeholder="Enter Phone No" name="phNo" [(ngModel)]="phNo" required #pn
+      (input)="onChange(fn,ln,pn)">
+  </div>
+
+</div>

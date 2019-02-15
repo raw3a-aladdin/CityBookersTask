@@ -1,0 +1,38 @@
+.flight-card {
+    padding: 15px 0;
+    color: white;
+}
+
+.flight-card .row > div {
+    margin: auto;
+}
+
+
+.flight-card .row  .title {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.flight-card .row  .left {
+    text-align: left;
+}
+
+.flight-card .row {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 4% 0%;
+    padding: 15px 0;
+
+}
+
+ 
+
+
+ .login-form .row input[type="email"]
+{
+    background: transparent;
+    border: none;
+}
+
+.login-form .row small{
+    color:red;
+}

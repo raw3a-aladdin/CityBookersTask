@@ -1,0 +1,34 @@
+<div class="container login-form">
+  <div class="row">
+    <div class="col-8">
+
+      <form #loginf="ngForm" (ngSubmit)="onSubmit(loginf)">
+        <p class="title">Login</p>
+
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <small id="emailvalidation" *ngIf="!emailValid() " class="form-text pull-right">*Please eneter right email
+            address </small>
+
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email"
+            [(ngModel)]="email" required>
+
+          <i id="emailHelp" class="form-text pull-right">We'll never share your email with anyone else.</i>
+        </div>
+        <br>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <small id="pwdvalidation" *ngIf="!pwdValid()" class="form-text pull-right">*Please eneter right pwd</small>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd"
+            [(ngModel)]="pwd" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary"
+          [disabled]="!loginf.valid || !emailValid() || !pwdValid()">Login</button>
+      </form>
+
+    </div>
+  </div>
+</div>

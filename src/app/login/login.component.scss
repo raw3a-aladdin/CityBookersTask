@@ -1,0 +1,49 @@
+.login-form {
+    padding: 15px 0;
+    color: white;
+}
+
+.login-form .row > div {
+    margin: auto;
+}
+
+
+.login-form .row  .title {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.login-form .row {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 4% 0%;
+    padding: 15px 0;
+
+}
+.login-form .row .form-control {
+    background-color: aqua !important;
+}
+.login-form .row .form-control:valid {
+    background-color:  #96d3ec !important;
+  }
+
+  .login-form .row input:not(:placeholder-shown) {
+    background-color:  #96d3ec!important;
+ }
+ 
+ input:-webkit-autofill{
+    background-color:  transparent !important;
+ }
+ 
+ .login-form .row input:placeholder-shown {
+    background-color:  #96d3ec !important;
+ }
+
+ .login-form .row input[type="email"]
+{
+    background: transparent;
+    border: none;
+}
+
+.login-form .row small{
+    color:red;
+}

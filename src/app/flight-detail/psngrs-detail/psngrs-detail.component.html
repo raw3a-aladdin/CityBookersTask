@@ -1,0 +1,16 @@
+<div class="container login-form">
+  <div class="row">
+    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-12">
+
+      <form #psngrsf="ngForm" (ngSubmit)="onSubmit(psngrsf)">
+        <p class="title">Passengers Details</p>
+
+        <app-one-psngr *ngFor="let x of sizeArray; let i=index" [ids]="i" (childEvent)="onepsngr=$event"
+          (childEvent)="checkValidity(i)"></app-one-psngr>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!psngrsf.valid || !allValid()">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>

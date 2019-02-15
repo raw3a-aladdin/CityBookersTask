@@ -1,0 +1,7 @@
+<div class="input-group mb-3 col-xs-12 col-sm-12 col-md-6 col-lg-4">
+  <div class="input-group-prepend">
+    <span class="btn btn-success" id="inputGroup-sizing-default">Date:</span>
+  </div>
+  <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker #dp="bsDatepicker"
+    name="date" [(ngModel)]="date" required (bsValueChange)="onChange(date)" (input)="onChange(date)" placement= "right">
+</div>

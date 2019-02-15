@@ -1,0 +1,54 @@
+<div class="container login-form">
+  <div class="row">
+    <div class="col-8">
+
+      <form name="flightf" #flightf="ngForm" (ngSubmit)="onSubmit(flightf)">
+        <p class="title">Flight Details</p>
+
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="btn btn-success">From: </span>
+          </div>
+          <select class="custom-select" id="inputGroupSelect03" required name="firstcity" #firstcity="ngModel" ngModel
+            (change)="setFirstCity(firstcity)">
+            <option *ngFor="let x of firstList" value="{{x}}">{{x}}</option>
+          </select>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="btn btn-success" id="inputGroup-sizing-default">To:</span>
+          </div>
+          <select class="custom-select" id="inputGroupSelect03" required name="seccity" #seccity="ngModel" ngModel
+            (change)="setSecCity(seccity)">
+            <option *ngFor="let x of secList" value="{{x}}">{{x}}</option>
+          </select>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="btn btn-success" id="inputGroup-sizing-default">No Of Passengers:</span>
+          </div>
+          <input type="number" class="form-control" aria-label="Default" min="1" max="9" name="psngrsNo"
+            [(ngModel)]="psngrsNo" required>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="btn btn-success" id="inputGroup-sizing-default">Test</span>
+          </div>
+          <input type="text" class="form-control"  name="test"
+            [(ngModel)]="selectedState" required [typeahead]="states" >
+        </div>
+
+
+        <app-datepicker-popup (childEvent)="date=$event"></app-datepicker-popup>
+
+
+        <button type="submit" class="btn btn-primary" [disabled]="!flightf.valid">Book</button>
+      </form>
+
+    </div>
+  </div>
+</div>
